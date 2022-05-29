@@ -1,6 +1,5 @@
 import os
 from dotenv import load_dotenv
-from pathlib import Path
 
 import requests
 from urllib.parse import urlparse
