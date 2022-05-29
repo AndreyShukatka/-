@@ -1,8 +1,9 @@
-import requests
 import os
-from urllib.parse import urlparse
 from dotenv import load_dotenv
 from pathlib import Path
+
+import requests
+from urllib.parse import urlparse
 
 load_dotenv()
 token = os.getenv('BITTLY_TOKEN')
