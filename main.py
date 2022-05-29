@@ -5,8 +5,7 @@ from pathlib import Path
 import requests
 from urllib.parse import urlparse
 
-load_dotenv()
-token = os.getenv('BITTLY_TOKEN')
+
 
 
 def shorten_link(token, url):
@@ -48,6 +47,8 @@ def is_valid(parsed_url):
 if __name__ == '__main__':
     url = input('Введите ссылку: ')
     parsed_url = urlparse(url)
+    load_dotenv()
+    token = os.getenv('BITTLY_TOKEN')
     if is_bitlink(parsed_url, token):
         print('По вашей ссылке перешли:', count_clicks(token, parsed_url), 'раз(а)')
     elif is_valid(parsed_url):
