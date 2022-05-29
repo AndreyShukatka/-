@@ -18,6 +18,32 @@ Python3 должен быть уже установлен.
 pip install -r requirements.txt
 ```
 
+## Пример работы скрипта:
+- запускаем скпирт
+- Скрипт запрашивает ввести ссылку:
+ 
+  ![image](https://user-images.githubusercontent.com/106096891/170862378-2ccadba6-f9be-4d67-adce-f2063874ee68.png)
+  
+- Вводите ссылку, например https://mail.ru
+ 
+  ![image](https://user-images.githubusercontent.com/106096891/170862392-e7d0e822-29d9-424d-b84a-7e29a8de00a7.png)
+  
+- Получаем в ответ сокращённую ссылку
+ 
+  ![image](https://user-images.githubusercontent.com/106096891/170862616-4d609ea0-ee0f-4192-a4ae-49d3382d5864.png)
+
+- Если ввести сокращенную ссылку:
+  
+  ![image](https://user-images.githubusercontent.com/106096891/170862756-2c61736f-7704-4ec3-a928-a98979dac5ce.png)
+
+- Получим в ответе количество переходов по вашей ссылке.
+
+  ![image](https://user-images.githubusercontent.com/106096891/170862780-cf84bd29-eb3a-40ac-a1fb-24b1f95470cc.png)
+
+
+  
+
+
 ### Цель проекта
 
 Код написан в образовательных целях на онлайн-курсе для веб-разработчиков [dvmn.org](https://dvmn.org/).
