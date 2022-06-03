@@ -49,7 +49,7 @@ def is_bitlink(parsed_url, token):
 def is_valid(parsed_url):
     return bool(parsed_url.netloc) and bool(parsed_url.scheme)
 
-def enter_url():
+def Add_command_line_parser():
     parser = argparse.ArgumentParser(description='Данный скрипт создан, '
             'что бы можно было обрезать длинные ссылки и сделать их короткими'
             ' с помощью сервиса bitly.com Так же можно будет после создания ссылки посмотреть, '
@@ -60,7 +60,7 @@ def enter_url():
 
 
 if __name__ == '__main__':
-    url = enter_url().url
+    url = Add_command_line_parser().url
     parsed_url = urlparse(url)
     load_dotenv()
     token = os.getenv('BITTLY_TOKEN')
