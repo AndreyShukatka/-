@@ -11,9 +11,9 @@ from urllib.parse import urlparse
 def shorten_link(token, url):
     body = {'long_url': url}
     headers = {'Authorization': f'Bearer {token}'}
-    url_bitly = 'https://api-ssl.bitly.com/v4/shorten'
+    bitly_url = 'https://api-ssl.bitly.com/v4/shorten'
     response = requests.post(
-        url_bitly,
+        bitly_url,
         headers=headers,
         json=body
     )
@@ -25,9 +25,9 @@ def shorten_link(token, url):
 def count_clicks(token, parsed_url):
     headers = {'Authorization': f'Bearer {token}'}
     param = {'units': -1}
-    url_bitly = f'https://api-ssl.bitly.com/v4/bitlinks/{parsed_url.netloc}{parsed_url.path}/clicks/summary'
+    bitly_url = f'https://api-ssl.bitly.com/v4/bitlinks/{parsed_url.netloc}{parsed_url.path}/clicks/summary'
     response = requests.get(
-        url_bitly, 
+        bitly_url, 
         headers=headers, 
         params=param
     )
@@ -38,9 +38,9 @@ def count_clicks(token, parsed_url):
 
 def is_bitlink(parsed_url, token):
     headers = {'Authorization': f'Bearer {token}'}
-    url_bitly = f'https://api-ssl.bitly.com/v4/bitlinks/{parsed_url.netloc}{parsed_url.path}'
+    bitly_url = f'https://api-ssl.bitly.com/v4/bitlinks/{parsed_url.netloc}{parsed_url.path}'
     response = requests.get(
-        url_bitly,
+        bitly_url,
         headers=headers
     )
     return response.ok
