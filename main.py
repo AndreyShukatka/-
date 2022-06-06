@@ -50,7 +50,7 @@ def is_valid(parsed_url):
     return bool(parsed_url.netloc) and bool(parsed_url.scheme)
 
 
-def Add_command_line_parser():
+def add_command_line_parser():
     parser = argparse.ArgumentParser(
         description='Данный скрипт создан, '
         'что бы можно было обрезать длинные ссылки и сделать их короткими'
@@ -64,7 +64,7 @@ def Add_command_line_parser():
 
 
 if __name__ == '__main__':
-    url = Add_command_line_parser().url
+    url = add_command_line_parser().url
     parsed_url = urlparse(url)
     load_dotenv()
     token = os.getenv('BITTLY_TOKEN')
