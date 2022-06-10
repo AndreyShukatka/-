@@ -67,7 +67,7 @@ if __name__ == '__main__':
     url = add_command_line_parser().url
     parsed_url = urlparse(url)
     load_dotenv()
-    token = os.getenv('BITTLY_TOKEN')
+    token = os.getenv('BITLY_TOKEN')
     if is_bitlink(parsed_url, token):
         print('По вашей ссылке перешли:',
               count_clicks(token, parsed_url), 'раз(а)')
